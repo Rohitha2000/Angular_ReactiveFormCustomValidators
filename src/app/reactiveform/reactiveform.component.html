@@ -1,0 +1,172 @@
+<div class="contain">
+
+    <form [formGroup]="registration" (ngSubmit)="onSubmit()">
+        <table>
+            <tbody>
+                <h2 class="text-center" style="font-size: 30px;  margin-top: 2rem">Reactive Form</h2>
+                <tr>
+                    <td>
+                        <div class="container">
+                            <div class="row" style="width: 100%; margin-top: 1rem;">
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="example-container">
+                                        <mat-form-field appearance="fill" style="width: 20rem;">
+                                            <mat-label>Enter First Name</mat-label>
+                                            <input matInput placeholder="First Name" formControlName="firstname"
+                                             (keypress)= "alpahbetsOnly($event)"   required>
+                                            <mat-error *ngIf="!registration.get('firstname').valid && 
+                                registration.get('firstname').touched">
+                                                <mat-error *ngIf="registration.get('firstname').errors?.['required']">
+                                                    Firstname is required
+                                                </mat-error>
+                                                <mat-error *ngIf="registration.get('firstname').errors?.['noSpaceAllowed']">
+                                                    Firstname cannot contain space
+                                                </mat-error>
+                                                <mat-error *ngIf="registration.get('firstname').errors?.['Forbidden']">
+                                                    Entered name is invalid
+                                                </mat-error>
+
+                                            </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="example-container">
+                                        <mat-form-field appearance="fill">
+                                            <mat-label>Enter Last Name</mat-label>
+                                            <input matInput placeholder="Last Name" formControlName="lastname" 
+                                            (keypress)= "alpahbetsOnly($event)" required>
+                                            <mat-error *ngIf="!registration.get('lastname').valid && 
+                                registration.get('lastname').touched">
+                                                <mat-error *ngIf="registration.get('lastname').errors['required']">
+                                                    Lastname is required
+                                                </mat-error>
+                                                <mat-error *ngIf="registration.get('lastname').errors?.['noSpaceAllowed']">
+                                                    Lastname cannot contain space
+                                                </mat-error>
+
+                                            </mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="container">
+                            <div class="row" style="margin-top: 2rem;">
+                                <div class="col-md-6">
+                                    <div class="example-container">
+                                        <mat-form-field appearance="fill">
+                                            <mat-label>Enter Email</mat-label>
+                                            <input matInput placeholder="Email" formControlName="email" required>
+                                            <mat-error *ngIf= "!registration.get('email').valid && 
+                                registration.get('email').touched && registration.get('email').errors?.['emailValidation']">Enter valid email</mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6" style="padding: 20px px; ">
+                                    <div style="margin-bottom: 2px;"><label>Gender</label></div>
+                                    
+                                    <mat-radio-group formControlName="gender" aria-label="Select an option">
+                                        <div *ngFor="let gen of genders;"
+                                            style="display: inline-block; padding-left: 10px; ">
+                                            <span>
+                                                <mat-radio-button [value]=gen>{{gen}}</mat-radio-button>
+                                            </span>
+                                        </div>
+
+                                    </mat-radio-group>
+                                    <mat-error class="gendererror" *ngIf= "!registration.get('gender').valid && 
+                        registration.get('gender').errors['required'] && submitted">
+                                        Please select gender</mat-error>
+                                        
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="container">
+                            <div class="row" style="margin-top: 2rem;">
+                                <div class="col-md-6">
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Food Specific</mat-label>
+                                        <mat-select formControlName="food">
+                                            <mat-option *ngFor="let fd of foods" [value]="fd">
+                                                {{fd}}
+                                            </mat-option>
+
+                                        </mat-select>
+                                        <mat-error *ngIf="!registration.get('food').valid && 
+                                registration.get('food').touched && registration.get('food').errors['required']">
+                                            Select Food type</mat-error>
+                                    </mat-form-field>
+                                </div>
+
+                            
+                            <div class="col-md-6">
+                                
+                                <mat-form-field appearance="fill">
+                                    <mat-select placeholder="Hobbies" formControlName="hobby" multiple [(ngModel)]="selected1">
+                                      <mat-option *ngFor= "let hob of hobb" [value]="hob">{{hob}}</mat-option>
+                                    </mat-select>
+                                  </mat-form-field>
+                                <mat-error class="checkboxerror" *ngIf= "!registration.get('hobby').valid ">
+                                            Select atleast 1 hobby</mat-error>
+                                
+                            </div>
+                        </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                        <button class="example-container mb-4 " mat-raised-button color="primary"
+                            style="margin-top: 3rem;margin-left: 10rem;" type="submit">Submit</button>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+
+<br>
+<button class="btn btn-success" style="margin-left: 30%;">Retrieve Data</button><br><br>
+<div class="table-container" >
+    <table style="margin-bottom: 30px;">
+        <thead>
+            <th class="viewdata">FirstName</th>
+            <th class="viewdata"> LastName </th>
+            <th class="viewdata"> Gender</th>
+            <th class="viewdata">Email</th>
+            <th class="viewdata">Food Type</th>
+            <th class="viewdata">Hobbies</th>
+        </thead>
+        <tbody>
+            <tr *ngFor= "let user of registerdata">
+                <td class="viewdata">{{user.firstname}}</td>
+                <td class="viewdata">{{user.lastname}}</td>
+                <td class="viewdata">{{user.gender}}</td>
+               <td class="viewdata">{{user.email}}</td>
+               <td class="viewdata">{{user.food}}</td>
+               <td class="viewdata">{{user.hobby}}</td>
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<footer>
+    <p class="text-center" style="background-color: lightgrey; height: 2rem; padding: 5px;"> All rights reserved  &copy; copyrights 2022</p>
+</footer>
+

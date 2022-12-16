@@ -1,0 +1,35 @@
+.mat-form-field {
+    
+    width: 20rem;
+}
+.contain{
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.gendererror{
+    margin-top: 2px;
+    font-size: 11px;
+}
+.checkboxerror{
+    font-size: 11px;
+    margin-top: -17px; 
+}
+.table-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+.viewdata{
+    padding: 6px 20px;
+    border: 1px solid black;
+}
+
+details{
+    border-bottom: 1px solid #8f8f8f;
+}
+
+details:hover{
+    border-bottom: 2px solid black;
+}
