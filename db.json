@@ -1,0 +1,171 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "firstname": "sdsdsd",
+      "lastname": "sdsdsdsds",
+      "gender": "female",
+      "email": "rohi@gma",
+      "food": "non-veg",
+      "hobby": [
+        "cricket",
+        "painting"
+      ],
+      "id": 2
+    },
+    {
+      "firstname": "hhh",
+      "lastname": "hhh",
+      "gender": "male",
+      "email": "gfgf@hh",
+      "food": "veg",
+      "hobby": [
+        "guitar",
+        "other"
+      ],
+      "id": 3
+    },
+    {
+      "firstname": "vfg",
+      "lastname": "bfbf",
+      "gender": "male",
+      "email": "bfbg@bfgb",
+      "food": "non-veg",
+      "hobby": [
+        "painting",
+        "guitar"
+      ],
+      "id": 4
+    },
+    {
+      "firstname": "vdfvdfv",
+      "lastname": "dfbvdf",
+      "gender": "female",
+      "email": "df@vfv",
+      "food": "veg",
+      "hobby": [
+        "guitar",
+        "painting"
+      ],
+      "id": 5
+    },
+    {
+      "firstname": "bft",
+      "lastname": "fgbfg",
+      "gender": "female",
+      "email": "fbfgbgf@fdrg",
+      "food": "veg",
+      "hobby": [
+        "painting"
+      ],
+      "id": 6
+    },
+    {
+      "firstname": "dvfd",
+      "lastname": "fdvdv",
+      "gender": "female",
+      "email": "dfvd@d",
+      "food": "non-veg",
+      "hobby": [
+        "painting"
+      ],
+      "id": 7
+    },
+    {
+      "firstname": "sfdfsfsd",
+      "lastname": "fddfs",
+      "gender": "male",
+      "email": "dfsd@gb",
+      "food": "non-veg",
+      "hobby": [
+        "painting"
+      ],
+      "id": 8
+    },
+    {
+      "firstname": "sdasdasd",
+      "lastname": "vxcx",
+      "gender": "female",
+      "email": "xvx@fvfd",
+      "food": "non-veg",
+      "hobby": [
+        "guitar",
+        "other"
+      ],
+      "id": 9
+    },
+    {
+      "firstname": "firstname",
+      "lastname": "asdxa",
+      "gender": "female",
+      "email": "dwedwe@gmail",
+      "food": "veg",
+      "hobby": [
+        "other"
+      ],
+      "id": 10
+    },
+    {
+      "firstname": "firstnamee",
+      "lastname": "sadadas",
+      "gender": "female",
+      "email": "rohi@gmail",
+      "food": "veg",
+      "hobby": [
+        "cricket"
+      ],
+      "id": 11
+    },
+    {
+      "firstname": "eeeee",
+      "lastname": "eeeecfsad",
+      "gender": "female",
+      "email": "adsa@fsds",
+      "food": "non-veg",
+      "hobby": [
+        "guitar",
+        "cricket"
+      ],
+      "id": 12
+    },
+    {
+      "firstname": "eeeee",
+      "lastname": "eeeecfsad",
+      "gender": "female",
+      "email": "adsa@fsds",
+      "food": "non-veg",
+      "hobby": [
+        "guitar",
+        "cricket"
+      ],
+      "id": 13
+    },
+    {
+      "firstname": "asdasd",
+      "lastname": "asdasda",
+      "gender": "female",
+      "email": "aa",
+      "food": "non-veg",
+      "hobby": [
+        "cricket"
+      ],
+      "id": 14
+    },
+    {
+      "firstname": "samyghj",
+      "lastname": "gfyjfth",
+      "gender": "male",
+      "email": "yffhfyf@jhfyfth",
+      "food": "non-veg",
+      "hobby": [
+        "guitar",
+        "cricket"
+      ],
+      "id": 15
+    }
+  ]
+}
